@@ -1,9 +1,11 @@
 import numpy
 from src import conv
+from src import weights_init
 
 # Run these examples if you would like to test the Conv1D operation.
 # Similar format can be used for Conv2D and Conv3D if you would like to experiment with that.
 
+"""
 in_array = numpy.array([1, 2, 3, 4, 5])
 kernel_1 = numpy.random.randn(3, 1)
 stride = 1
@@ -19,3 +21,10 @@ out2 = conv.Conv1D(kernel=kernel_2, stride=stride, padding=padding_2)
 out_2 = out.forward(in_array=out_1)
 
 print(out_2)
+"""
+
+shape = (3, 3)
+
+print(weights_init.uniform(shape))
+print(weights_init.kaiming(shape))
+print(weights_init.glorot(shape))
