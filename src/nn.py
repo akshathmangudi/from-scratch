@@ -1,6 +1,7 @@
 import numpy
 import random
 from .autograd import Tensor
+import functions as Functions
 
 
 class _Module:
