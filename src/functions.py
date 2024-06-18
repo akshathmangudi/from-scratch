@@ -1,5 +1,5 @@
 import numpy
-from .autograd import Tensor
+from .tensor import Tensor
 
 
 class LeakyReLU: 

@@ -1,6 +1,6 @@
 import numpy
 import random
-from .autograd import Tensor
+from .tensor import Tensor
 import functions as Functions
 
 
