@@ -75,7 +75,7 @@ class Conv2D:
 
 class Conv3D: 
     def __init__(self, kernel: numpy.ndarray, stride: int, padding: int) -> None: 
-        self.kernel = kernell
+        self.kernel = kernel
         self.stride = stride
         self.padding = padding
 
@@ -102,5 +102,5 @@ class Conv3D:
 
         windows = as_strided(padded_input, shape=shape, strides=strides)
 
-        out_tensor = numpy.tensordot(windows, kernel, axes=((3, 4, 5), (0, 1, 2)))
+        out_tensor = numpy.tensordot(windows, self.kernel, axes=((3, 4, 5), (0, 1, 2)))
         return out_tensor

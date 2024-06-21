@@ -1,14 +1,19 @@
 import numpy
 from .tensor import Tensor
 
+"""
+    These set of functions are defined under a Functions class in 
+    nn.py also, but these two implementations can be analogous to 
+    torch.nn and torch.nn.functional
+"""
+
 
 class LeakyReLU: 
-    def __init__(self): 
-        pass
+    def __init__(self, alpha: float = 0.01): 
+        self.alpha = alpha
 
     def forward(self, x): 
-        pass
-
+        return numpy.maximum(self.alpha*x, x)
 
 class ReLU: 
     def __init__(self): 
