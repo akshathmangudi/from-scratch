@@ -1,5 +1,6 @@
 # Defined by me 
 notebooks/
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
